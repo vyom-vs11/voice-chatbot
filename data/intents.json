@@ -1,0 +1,391 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Hey there",
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "Greetings",
+        "Howdy",
+        "Hi there, how are you?",
+        "Hey, is anyone there?",
+        "Hello assistant",
+        "What's up?",
+        "Hi bot",
+        "Nice to meet you",
+        "Start conversation"
+      ],
+      "responses": [
+        "Hello! I am your AI voice assistant. How can I help you today?",
+        "Hi there! Welcome. Feel free to speak or type your question.",
+        "Greetings! How may I assist you right now?",
+        "Hello! Great to hear from you. What would you like to know?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "Catch you later",
+        "Have a great day",
+        "I must go now",
+        "Farewell",
+        "Talk to you later",
+        "Bye bye",
+        "End chat",
+        "Quit",
+        "Exit",
+        "Good night",
+        "See ya",
+        "I am leaving"
+      ],
+      "responses": [
+        "Goodbye! Have a wonderful day ahead.",
+        "Bye! Feel free to return if you have more questions.",
+        "Take care! See you next time.",
+        "Farewell! Thank you for chatting with me."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "Thanks a lot",
+        "Much appreciated",
+        "Thank you so much",
+        "That was very helpful",
+        "I appreciate your help",
+        "Thanks for the assistance",
+        "Great, thanks!",
+        "Thanks a million",
+        "You helped me a lot",
+        "Awesome, thank you"
+      ],
+      "responses": [
+        "You're very welcome! Glad I could help.",
+        "Anytime! Let me know if there's anything else you need.",
+        "My pleasure! Happy to be of service.",
+        "You're welcome! Have a fantastic day!"
+      ]
+    },
+    {
+      "tag": "bot_identity",
+      "patterns": [
+        "Who are you?",
+        "What is your name?",
+        "Tell me about yourself",
+        "Are you a robot or a human?",
+        "What are you?",
+        "Introduce yourself",
+        "Who created you?",
+        "What kind of bot are you?",
+        "Identify yourself",
+        "Are you an AI?",
+        "Tell me who you are"
+      ],
+      "responses": [
+        "I am an AI-powered voice chatbot built using Speech Recognition and Deep Learning.",
+        "My name is VoiceBot! I am an intelligent assistant trained on deep neural networks to assist you.",
+        "I am an artificial intelligence voice agent designed to understand speech and respond to your queries in real time."
+      ]
+    },
+    {
+      "tag": "bot_capabilities",
+      "patterns": [
+        "What can you do?",
+        "How can you help me?",
+        "What are your features?",
+        "What skills do you have?",
+        "What questions can I ask you?",
+        "Show me your capabilities",
+        "Help me understand what you can do",
+        "What are your main functions?",
+        "How does this chatbot work?",
+        "What services can you assist with?",
+        "What is your purpose?"
+      ],
+      "responses": [
+        "I can process voice and text input, classify your intent using a Deep Learning LSTM model, answer service questions, provide contact details, give operational hours, and more!",
+        "You can speak into your microphone or type messages. I can answer inquiries about services, locations, technical support, admissions, pricing, and general questions.",
+        "My key capabilities include real-time Speech-to-Text conversion, Deep Learning intent classification, and conversational response generation."
+      ]
+    },
+    {
+      "tag": "working_hours",
+      "patterns": [
+        "What are your working hours?",
+        "When are you open?",
+        "What is your schedule?",
+        "Are you open on weekends?",
+        "What time do you close?",
+        "What are your office hours?",
+        "At what time does support start?",
+        "Are you open today?",
+        "Operating hours please",
+        "When do you open and close?",
+        "What are the business hours?",
+        "Are you available on Saturday?"
+      ],
+      "responses": [
+        "Our working hours are Monday to Friday from 9:00 AM to 6:00 PM (EST). We are closed on Sundays.",
+        "We operate Monday through Friday, 9:00 AM to 6:00 PM. Weekend support is available via email.",
+        "Our team is available 9 AM to 6 PM on weekdays. This AI chatbot, however, is available 24/7!"
+      ]
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "Where are you located?",
+        "What is your address?",
+        "Where is your office?",
+        "How do I reach your headquarters?",
+        "Where can I find you?",
+        "What city are you based in?",
+        "Give me your geographical location",
+        "What is your physical address?",
+        "Campus address",
+        "Where is the campus?",
+        "Directions to your office"
+      ],
+      "responses": [
+        "Our central headquarters is located at Innovation Center, Tech Campus, University Park.",
+        "We are located at 100 AI Boulevard, Suite 400, Silicon City. You can also connect with us digitally.",
+        "You can find us at the main campus academic building or visit our online portal anytime."
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "How can I contact you?",
+        "What is your phone number?",
+        "What is your support email?",
+        "How do I reach customer service?",
+        "Give me customer care details",
+        "Can I speak with a helpline?",
+        "Provide your contact information",
+        "Telephone number",
+        "Customer service email",
+        "How to call support?",
+        "Contact info"
+      ],
+      "responses": [
+        "You can reach our support team at support@example.com or call us toll-free at +1 (800) 123-4567.",
+        "Contact us via email at info@voicebot-ai.org or telephone at +1-800-555-0199.",
+        "Our customer support desk is reachable at helpdesk@example.edu or by phone from 9 AM to 6 PM."
+      ]
+    },
+    {
+      "tag": "courses_programs",
+      "patterns": [
+        "What courses do you offer?",
+        "Tell me about the degree programs",
+        "What academic subjects are available?",
+        "Are there computer science courses?",
+        "Can I study machine learning here?",
+        "What are the available curriculum options?",
+        "List all study programs",
+        "Available courses",
+        "What degrees can I study?",
+        "Do you teach artificial intelligence?",
+        "What diplomas or degrees are there?"
+      ],
+      "responses": [
+        "We offer comprehensive programs in Computer Science, Artificial Intelligence, Data Science, and Machine Learning.",
+        "Our curriculum features undergraduate and postgraduate tracks in AI Engineering, Software Systems, and Deep Learning.",
+        "Explore courses including Deep Learning, Natural Language Processing, Computer Vision, and Cloud Computing."
+      ]
+    },
+    {
+      "tag": "admission_inquiry",
+      "patterns": [
+        "How do I apply for admission?",
+        "What is the admission procedure?",
+        "When is the application deadline?",
+        "What are the eligibility criteria?",
+        "How can I enroll in a course?",
+        "Where can I submit my admission form?",
+        "Tell me about the application process",
+        "Enrollment process",
+        "Admission requirements",
+        "How to register for admission?",
+        "When do admissions start?"
+      ],
+      "responses": [
+        "Admissions are open online. You can complete the application form on the admissions portal before the semester deadline.",
+        "To apply, submit your academic transcripts, statement of purpose, and identity proof on our official registration portal.",
+        "Applications are reviewed on a rolling basis. Ensure your submission is completed at least two weeks before term commencement."
+      ]
+    },
+    {
+      "tag": "pricing",
+      "patterns": [
+        "How much does it cost?",
+        "What are your fees?",
+        "What are the subscription plans?",
+        "Is there a free trial?",
+        "Can you share pricing details?",
+        "How expensive is the service?",
+        "Tell me about tuition and costs",
+        "What is the price?",
+        "Cost of courses",
+        "Course fees",
+        "Rate card and pricing"
+      ],
+      "responses": [
+        "Our fee structure includes a free tier for standard users, with premium educational tiers starting at $19/month.",
+        "Tuition and pricing depend on the selected program. Detailed fee breakdowns are accessible in our fee catalog.",
+        "We offer flexible payment plans, merit-based scholarships, and student discounts across all programs."
+      ]
+    },
+    {
+      "tag": "payment_methods",
+      "patterns": [
+        "What payment methods do you accept?",
+        "Can I pay with credit card?",
+        "Do you take PayPal or UPI?",
+        "Can I pay via net banking?",
+        "How can I make the payment?",
+        "Are online payments secure?",
+        "What are the accepted payment options?",
+        "Payment options",
+        "Can I pay using debit card?",
+        "Do you support online transactions?",
+        "How do I pay my fees?"
+      ],
+      "responses": [
+        "We accept all major credit/debit cards (Visa, MasterCard, Amex), PayPal, Net Banking, and UPI.",
+        "Payments can be made securely online via encrypted SSL gateways using credit cards, debit cards, or bank transfer.",
+        "All standard electronic payment methods are supported including digital wallets and wire transfers."
+      ]
+    },
+    {
+      "tag": "technical_support",
+      "patterns": [
+        "I have a technical problem",
+        "The system is not working",
+        "I cannot log in",
+        "The application crashed",
+        "I need help troubleshooting an error",
+        "My voice input is not being detected",
+        "Why is the webpage not loading?",
+        "Fix my technical issue",
+        "Microphone error",
+        "Audio not recording",
+        "Bug report",
+        "System glitch"
+      ],
+      "responses": [
+        "For voice input issues, please ensure your browser has granted microphone permissions. For login issues, try clearing cookies or reset your password.",
+        "Technical difficulties can often be resolved by refreshing the page and ensuring HTTPS is enabled for microphone access. If the issue persists, contact tech-support@example.com.",
+        "Our technical support team is ready to investigate. Please describe your error code or error message for specific diagnostics."
+      ]
+    },
+    {
+      "tag": "refund_policy",
+      "patterns": [
+        "Can I get a refund?",
+        "What is your refund policy?",
+        "How do I cancel my subscription and get my money back?",
+        "Is there a money back guarantee?",
+        "How long do refunds take to process?",
+        "I want my fee returned",
+        "Cancel order and refund",
+        "How to request refund?",
+        "Return policy",
+        "Money back policy"
+      ],
+      "responses": [
+        "We offer a 14-day hassle-free money-back guarantee on all subscriptions if you are not completely satisfied.",
+        "Refund requests submitted within 14 days of enrollment are processed to the original payment method within 5 to 7 business days.",
+        "To initiate a refund, please contact billing@example.com with your transaction receipt."
+      ]
+    },
+    {
+      "tag": "human_agent",
+      "patterns": [
+        "Can I speak to a real person?",
+        "Connect me with a human agent",
+        "I want to talk to an operator",
+        "Transfer me to a live representative",
+        "I do not want to talk to a robot",
+        "Is there an actual person available?",
+        "Live agent please",
+        "Speak to customer agent",
+        "Talk to a human",
+        "Transfer call"
+      ],
+      "responses": [
+        "I can connect you to our live support representative. Typical wait time is under 3 minutes during business hours.",
+        "Connecting you to an agent... You can also dial our direct helpline at +1 (800) 123-4567 to speak with our support staff immediately.",
+        "Certainly! Please hold while I route your session to our customer care team."
+      ]
+    },
+    {
+      "tag": "feedback",
+      "patterns": [
+        "I want to give feedback",
+        "Can I submit a suggestion?",
+        "I want to file a complaint",
+        "How do I rate this service?",
+        "Your service is awesome",
+        "I have a feature request",
+        "Where can I review the chatbot?",
+        "Submit review",
+        "Leave a rating",
+        "Improvement suggestion",
+        "Feedback form"
+      ],
+      "responses": [
+        "Thank you! We value your feedback immensely. Please share your suggestions or thoughts right here.",
+        "Your feedback helps us continuously train and refine our deep learning models. Feel free to leave your remarks!",
+        "We appreciate your constructive input. You can also email feedback directly to feedback@example.org."
+      ]
+    },
+    {
+      "tag": "jokes_humor",
+      "patterns": [
+        "Tell me a joke",
+        "Say something funny",
+        "Make me laugh",
+        "Do you know any humor?",
+        "Crack a joke",
+        "Can robots laugh?",
+        "Tell another joke",
+        "Be funny",
+        "Humor me",
+        "Give me a punchline"
+      ],
+      "responses": [
+        "Why do programmers prefer dark mode? Because light attracts bugs!",
+        "Why did the neural network cross the road? To optimize the loss function on the other side!",
+        "There are 10 types of people in the world: those who understand binary, and those who don't.",
+        "Why was the computer cold? It forgot to close its Windows!"
+      ]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [
+        "Blah blah blah",
+        "asdfghjkl",
+        "xyz random gibberish",
+        "unintelligible words",
+        "qwertyuiop",
+        "nonsense sentence",
+        "random letters"
+      ],
+      "responses": [
+        "I am not sure I understood that clearly. Could you please rephrase or speak again?",
+        "Pardon me, I didn't quite catch that. You can ask me about our courses, hours, location, or contact details.",
+        "I'm still learning! Could you try asking your question using different words, or use the microphone again?"
+      ]
+    }
+  ]
+}

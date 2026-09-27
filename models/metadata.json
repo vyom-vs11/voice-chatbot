@@ -1,0 +1,23 @@
+{
+  "max_len": 16,
+  "classes": [
+    "admission_inquiry",
+    "bot_capabilities",
+    "bot_identity",
+    "contact",
+    "courses_programs",
+    "fallback",
+    "feedback",
+    "goodbye",
+    "greeting",
+    "human_agent",
+    "jokes_humor",
+    "location",
+    "payment_methods",
+    "pricing",
+    "refund_policy",
+    "technical_support",
+    "thanks",
+    "working_hours"
+  ]
+}

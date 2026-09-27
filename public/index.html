@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Siri | Apple iOS Style AI Voice Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=SF+Pro+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="ios-theme">
+    <!-- Ambient Background Siri Glow Orbs -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <div class="ios-device-container">
+        <!-- iOS Status Bar & Header -->
+        <header class="ios-header">
+            <div class="ios-header-left">
+                <div class="siri-pill-badge">
+                    <span class="siri-mini-orb"></span>
+                    <span class="siri-title">Siri AI</span>
+                </div>
+                <div class="ios-status" id="iosStatus">Tap orb or speak</div>
+            </div>
+            <div class="ios-header-right">
+                <label class="ios-toggle-btn" title="Auto-speak voice response">
+                    <input type="checkbox" id="autoVoiceToggle" checked>
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-text">Voice</span>
+                </label>
+                <button class="ios-btn-icon" id="clearChatBtn" title="Clear Dialogue">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Siri Conversation Feed -->
+        <main class="siri-feed" id="chatStream">
+            <!-- Welcome Card -->
+            <div class="siri-card-row bot-row">
+                <div class="siri-card">
+                    <div class="siri-intro-header">
+                        <div class="siri-intro-orb"></div>
+                        <div class="siri-intro-title">What can I help you with?</div>
+                    </div>
+                    <p class="siri-card-text">
+                        I'm your intelligent voice assistant, built with <strong>Deep Learning (Bi-LSTM)</strong> and <strong>Open Knowledge</strong>. You can ask me <em>anything</em>:
+                    </p>
+                    <div class="siri-capabilities">
+                        <div class="cap-item">🏏 <span>"Who is the best cricketer?"</span></div>
+                        <div class="cap-item">🗼 <span>"What is the capital of Japan?"</span></div>
+                        <div class="cap-item">⏰ <span>"What is the time right now?"</span></div>
+                        <div class="cap-item">🧮 <span>"What is 25 percent of 400?"</span></div>
+                        <div class="cap-item">🕒 <span>"What are your working hours?"</span></div>
+                    </div>
+                    <div class="siri-card-footer">
+                        <span class="siri-source-pill">⚡ Powered by Bi-LSTM & Siri Knowledge</span>
+                        <button class="btn-play-voice" onclick="speakText(this.dataset.msg)" data-msg="Hello! What can I help you with today? You can tap the Siri orb to ask me anything!">🔊 Speak</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Floating Siri Suggestion Chips -->
+        <div class="siri-suggestions-bar">
+            <button class="siri-chip" data-query="Who is the best cricketer?">🏏 Best Cricketer</button>
+            <button class="siri-chip" data-query="What is the capital of Japan?">🗼 Capital of Japan</button>
+            <button class="siri-chip" data-query="What is the time right now?">⏰ Current Time</button>
+            <button class="siri-chip" data-query="What is 20 percent of 500?">🧮 20% of 500</button>
+            <button class="siri-chip" data-query="What are your working hours?">🕒 Working Hours</button>
+            <button class="siri-chip" data-query="Where is your campus located?">📍 Campus Location</button>
+            <button class="siri-chip" data-query="Tell me a joke">🎭 Tell a Joke</button>
+        </div>
+
+        <!-- Siri Voice Orb & Input Bottom Control Dock -->
+        <footer class="siri-dock">
+            <!-- Active Listening Waveform Overlay -->
+            <div class="siri-listening-overlay" id="siriListeningOverlay" style="display: none;">
+                <div class="siri-waveform">
+                    <span class="wave-stroke s-1"></span>
+                    <span class="wave-stroke s-2"></span>
+                    <span class="wave-stroke s-3"></span>
+                    <span class="wave-stroke s-4"></span>
+                    <span class="wave-stroke s-5"></span>
+                    <span class="wave-stroke s-6"></span>
+                    <span class="wave-stroke s-7"></span>
+                </div>
+                <div class="siri-live-text" id="siriLiveTranscript">Listening...</div>
+                <button class="siri-done-btn" id="stopVoiceBtn">Done</button>
+            </div>
+
+            <!-- Siri Input Pill Row -->
+            <form id="chatForm" class="siri-input-pill">
+                <!-- Iconic Siri Glowing Orb -->
+                <button type="button" class="siri-orb-btn" id="siriOrbBtn" title="Tap to talk to Siri">
+                    <div class="siri-orb-core">
+                        <div class="orb-layer-1"></div>
+                        <div class="orb-layer-2"></div>
+                        <div class="orb-layer-3"></div>
+                    </div>
+                </button>
+
+                <!-- Input Text Box -->
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    class="siri-text-input" 
+                    placeholder="Ask Siri anything..." 
+                    autocomplete="off"
+                >
+
+                <!-- Send Button -->
+                <button type="submit" class="siri-send-btn" id="sendBtn" title="Send Query">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="19" x2="12" y2="5"></line>
+                        <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                </button>
+            </form>
+        </footer>
+    </div>
+
+    <!-- Deep Learning Model Inspector Modal -->
+    <div class="siri-modal-backdrop" id="inspectorModal" style="display: none;">
+        <div class="siri-modal-card">
+            <div class="siri-modal-header">
+                <h3>🧠 Bi-LSTM Neural Intelligence</h3>
+                <button class="siri-modal-close" id="closeModalBtn">&times;</button>
+            </div>
+            <p class="siri-modal-sub">Softmax probability distribution from the deep learning intent model:</p>
+            <div class="siri-modal-list" id="modalProbsList"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
