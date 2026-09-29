@@ -1,5 +1,7 @@
 # 🎙️ Online Voice-Enabled Chatbot: Architecture, Working & Technical Documentation
 
+> **Student Name:** Vyom Sen  
+> **Registration Number:** 23BAI0032  
 > **Live Production Deployment URL:**  
 > 🔗 [https://voice-chatbot-hoa5fjkn6-vyom-vs11s-projects.vercel.app/](https://voice-chatbot-hoa5fjkn6-vyom-vs11s-projects.vercel.app/)  
 >
