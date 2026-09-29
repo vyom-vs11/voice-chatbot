@@ -2,10 +2,11 @@
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![TensorFlow 2.x](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://tensorflow.org/)
-[![Streamlit App](https://img.shields.io/badge/Streamlit-1.35%2B-FF4B4B.svg)](https://streamlit.io/)
-[![Vercel Deployment](https://img.shields.io/badge/Vercel-Serverless-black.svg)](https://vercel.com/)
+[![Live on Vercel](https://img.shields.io/badge/Vercel_Live_Demo-Visit_App-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://voice-chatbot-hoa5fjkn6-vyom-vs11s-projects.vercel.app/)
 [![Deep Learning](https://img.shields.io/badge/Architecture-Bi--LSTM-success.svg)](#deep-learning-architecture)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+> 🌐 **Live Production Link:** [https://voice-chatbot-hoa5fjkn6-vyom-vs11s-projects.vercel.app/](https://voice-chatbot-hoa5fjkn6-vyom-vs11s-projects.vercel.app/)
 
 An end-to-end, academic-grade **Online Voice-Enabled Chatbot** combining **Automatic Speech Recognition (ASR)**, **Natural Language Processing (NLP)**, and a **Bidirectional Long Short-Term Memory (Bi-LSTM)** Deep Learning neural network for conversational intent classification.
 
@@ -242,7 +243,7 @@ This project is fully configured for native **Vercel Serverless Deployment**:
 5. Click **"Deploy"**.
 6. In ~30 seconds, Vercel will build and assign your live production URL:
    ```text
-   https://<your-project-name>.vercel.app
+   https://voice-chatbot-hoa5fjkn6-vyom-vs11s-projects.vercel.app/
    ```
 
 #### Method B: Deploy via Vercel CLI
